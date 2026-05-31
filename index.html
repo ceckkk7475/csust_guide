@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>长沙理工大学新生入学指南</title>
+    <meta name="description" content="面向长沙理工大学本科与研究生新生的手机优先入学指南，包含搜索、筛选、收藏、报到清单和打印版。">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="app-header">
+      <nav class="topbar" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="长沙理工大学新生入学指南首页">
+          <span class="brand-mark">CSUST</span>
+          <span>新生入学指南</span>
+        </a>
+        <div class="topbar-actions">
+          <a href="#checklist">清单</a>
+          <a href="#contacts">入口</a>
+          <button class="icon-button" id="printButton" type="button" title="打印清单" aria-label="打印清单">
+            <span aria-hidden="true">⎙</span>
+          </button>
+        </div>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">本科 + 研究生 · 手机优先 · 可持续更新</p>
+          <h1>长沙理工大学新生入学指南</h1>
+          <p class="hero-text">按你现在遇到的问题查：报到材料、校区确认、宿舍入住、选课培养、研究生事务、长沙生活和常见避坑。</p>
+        </div>
+        <div class="quick-stats" aria-label="指南概览">
+          <div>
+            <strong id="cardCount">0</strong>
+            <span>问题卡片</span>
+          </div>
+          <div>
+            <strong>9</strong>
+            <span>场景分区</span>
+          </div>
+          <div>
+            <strong id="savedCount">0</strong>
+            <span>已收藏</span>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="controls-band" aria-label="搜索和筛选">
+        <div class="search-box">
+          <label for="searchInput">搜索问题、关键词或官方入口</label>
+          <input id="searchInput" type="search" placeholder="例如：报到材料、宿舍、云塘、导师、校园卡" autocomplete="off">
+        </div>
+
+        <div class="filter-row" aria-label="身份筛选">
+          <button class="chip is-active" type="button" data-filter-group="audience" data-filter-value="all">全部</button>
+          <button class="chip" type="button" data-filter-group="audience" data-filter-value="undergraduate">本科</button>
+          <button class="chip" type="button" data-filter-group="audience" data-filter-value="master">硕士</button>
+          <button class="chip" type="button" data-filter-group="audience" data-filter-value="doctor">博士</button>
+          <button class="chip" type="button" data-filter-group="audience" data-filter-value="parttime">非全日制</button>
+        </div>
+
+        <div class="filter-row" aria-label="校区筛选">
+          <button class="chip is-active" type="button" data-filter-group="campus" data-filter-value="all">全部校区</button>
+          <button class="chip" type="button" data-filter-group="campus" data-filter-value="yuntang">云塘</button>
+          <button class="chip" type="button" data-filter-group="campus" data-filter-value="jinpenling">金盆岭</button>
+          <button class="chip" type="button" data-filter-group="campus" data-filter-value="common">通用</button>
+        </div>
+      </section>
+
+      <section class="notice-band" aria-label="信息核验提示">
+        <div>
+          <strong>官方信息优先</strong>
+          <p>涉及时间、费用、报到地点、电话和材料要求的内容，以学校当年正式通知为准。未被 2026 级入学手册确认的条目已标注“待更新”。</p>
+        </div>
+      </section>
+
+      <section class="content-layout">
+        <aside class="category-nav" aria-label="内容分区">
+          <h2>分区</h2>
+          <div id="categoryNav"></div>
+        </aside>
+
+        <section class="cards-area" aria-label="问题卡片">
+          <div class="results-head">
+            <h2>问题库</h2>
+            <p id="resultSummary">正在载入...</p>
+          </div>
+          <div id="cardsContainer" class="cards-grid"></div>
+          <p id="emptyState" class="empty-state" hidden>没有找到匹配内容，换个关键词或清除筛选试试。</p>
+        </section>
+      </section>
+
+      <section class="checklist-section" id="checklist">
+        <div class="section-heading">
+          <p class="eyebrow">可打印 PDF 清单版</p>
+          <h2>报到前后高频任务</h2>
+          <p>勾选状态会保存在本机浏览器。点击右上角打印按钮可导出为 PDF。</p>
+        </div>
+        <div id="checklistContainer" class="checklist-grid"></div>
+      </section>
+
+      <section class="contacts-section" id="contacts">
+        <div class="section-heading">
+          <p class="eyebrow">常用入口</p>
+          <h2>先从官方渠道确认</h2>
+        </div>
+        <div class="link-grid">
+          <a href="https://www.csust.edu.cn/zsw/info/1055/2599.htm" target="_blank" rel="noopener">2026 年普通高校招生章程</a>
+          <a href="https://www.csust.edu.cn/zsw/info/1095/2326.htm" target="_blank" rel="noopener">2024 年本科新生入学手册</a>
+          <a href="https://www.csust.edu.cn/yjsy/info/1179/11426.htm" target="_blank" rel="noopener">2025 研究生手册</a>
+          <a href="https://www.csust.edu.cn/yjsy/info/1113/11449.htm" target="_blank" rel="noopener">2026 年硕士研究生招生简章</a>
+          <a href="https://www.csust.edu.cn/xxgk/xyfw.htm" target="_blank" rel="noopener">校园方位</a>
+          <a href="https://www.csust.edu.cn/xsgzb/info/1071/8437.htm" target="_blank" rel="noopener">学生公寓入住指南</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>最后更新：2026-05-31。建议每年在录取通知书寄出后，对照当年入学手册集中更新一次。</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

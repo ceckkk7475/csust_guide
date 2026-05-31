@@ -1,0 +1,25 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency and build outputs, in case the static site later adopts tooling
+node_modules/
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Local-only generated exports
+*.pdf
+*.zip

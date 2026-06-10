@@ -39,9 +39,13 @@
 
 ## 部署到 GitHub Pages
 
-1. 将本目录提交并推送到 `ceckkk7475/csust_guide` 的默认分支。
-2. 在仓库 Settings → Pages 中选择从默认分支根目录部署。
-3. 部署完成后，把 Pages 链接放到班级群、迎新群或公众号菜单。
+项目已配置 GitHub Actions 自动部署。后续只需要把更新推送到 `main` 分支，工作流会发布仓库根目录中的静态站点。
+
+首次启用时，在仓库 Settings → Pages 中确认 Source 选择为 `GitHub Actions`。发布完成后，站点地址通常为：
+
+```text
+https://ceckkk7475.github.io/csust_guide/
+```
 
 ## 官方来源
 
